@@ -42,8 +42,8 @@ router.get("/", (req, res) => {
   res.end();
 });
 router.get("/another", (req, res) => res.json({ route: req.originalUrl }));
-router.post("/submitContactInfo", (req, res) => {
-  telegram.sendMessage(
+router.post("/submitContactInfo", async (req, res) => {
+  await telegram.sendMessage(
     receiverId,
     `Имя: ${req.body.name}
     Вид спорта: ${req.body.sport}
