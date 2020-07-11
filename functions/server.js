@@ -47,7 +47,7 @@ router.post("/submitContactInfo", async (req, res) => {
     receiverId,
     `
 💲💲💲
-Новая заявка
+Новая заявка!
 💲💲💲
 Имя: ${req.body.name}
 Вид спорта: ${req.body.sport}
