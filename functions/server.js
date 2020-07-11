@@ -46,9 +46,8 @@ router.post("/submitContactInfo", async (req, res) => {
   await telegram.sendMessage(
     receiverId,
     `
-💲💲💲
-Новая заявка!
-💲💲💲
+💰Новая заявка!💰
+*****************
 Имя: ${req.body.name}
 Вид спорта: ${req.body.sport}
 Инстаграм: ${req.body.instagram}
