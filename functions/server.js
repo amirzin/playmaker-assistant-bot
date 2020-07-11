@@ -45,9 +45,10 @@ router.get("/another", (req, res) => res.json({ route: req.originalUrl }));
 router.post("/submitContactInfo", async (req, res) => {
   await telegram.sendMessage(
     receiverId,
-    `Имя: ${req.body.name}
-    Вид спорта: ${req.body.sport}
-    Инстаграм: ${req.body.instagram}
+    `
+Имя: ${req.body.name}
+Вид спорта: ${req.body.sport}
+Инстаграм: ${req.body.instagram}
     `,
   );
   res.send('ok')
