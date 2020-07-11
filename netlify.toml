@@ -1,2 +1,7 @@
 [build]
   functions = "functions"
+[context.production]
+  environment = { 
+    BOT_TOKEN="1336920146:AAF9HoiPQl42WnQ3DAlDnDyO-CdTuws6ncg",
+    ARTHUR_ID="19263838"
+   }
