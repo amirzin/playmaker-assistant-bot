@@ -37,9 +37,6 @@ app.use(express.json());
 const receiverId = "19263838";
 
 router.get("/", (req, res) => {
-  telegram.sendMessage(receiverId, `Hello, bro!`);
-  res.send("ok");
-
   res.writeHead(200, { "Content-Type": "text/html" });
   res.write("<h1>Hello from Express.js!</h1>");
   res.end();
@@ -48,10 +45,9 @@ router.get("/another", (req, res) => res.json({ route: req.originalUrl }));
 router.post("/submitContactInfo", (req, res) => {
   telegram.sendMessage(
     receiverId,
-    `Name: ${req.body.name}
-    Email Address: ${req.body.email}
-    Subject: ${req.body.subject}
-    Message: ${req.body.message}`,
+    `Имя: ${req.body.name}
+    Вид спорта: ${req.body.sport}
+    Инстаграм: ${req.body.instagram}`,
   );
   res.send('ok')
 });
