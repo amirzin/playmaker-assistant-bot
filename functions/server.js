@@ -54,7 +54,7 @@ router.post("/submitContactInfo", (req, res) => {
     Message: ${req.body.message}`,
   );
   res.send('ok')
-};
+});
 
 app.use(bodyParser.json());
 app.use("/.netlify/functions/server", router); // path must route to lambda
