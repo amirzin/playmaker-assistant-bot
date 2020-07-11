@@ -47,11 +47,10 @@ router.post("/submitContactInfo", async (req, res) => {
     receiverId,
     `
 💰Новая заявка!💰
-*****************
+
 Имя: ${req.body.name}
 Вид спорта: ${req.body.sport}
-Инстаграм: ${req.body.instagram}
-    `,
+Инстаграм: ${req.body.instagram}`,
   );
   res.send('ok')
 });
